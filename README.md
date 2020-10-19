@@ -1,0 +1,1 @@
+![Test Image](https://github.com/anhuntz/fileman/tree/master/Resources/Icon128.png)

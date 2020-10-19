@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "FileMan",
+	"Description": "A standard file manager for blueprints.",
+	"Category": "Blueprints",
+	"CreatedBy": "Aaron Hunt",
+	"CreatedByURL": "https://github.com/anhuntz",
+	"DocsURL": "https://github.com/anhuntz/fileman/wiki",
+	"MarketplaceURL": "https://github.com/anhuntz/fileman",
+	"SupportURL": "https://github.com/anhuntz/fileman",
+	"EngineVersion": "4.22.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "FileMan",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"Linux"
+			]
+		}
+	]
+}

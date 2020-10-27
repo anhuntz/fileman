@@ -2,12 +2,15 @@
 
 #include "FileManBPLibrary.h"
 #include "FileMan.h"
+#include "HAL/FileManagerGeneric.h"
 
 bool UFileManBPLibrary::DeleteFile(FString FileName) {
-	if (remove(TCHAR_TO_ANSI(*(FPaths::ProjectDir() + FileName))) != 0)
-		return 0;
+	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+
+	if (PlatformFile.FileExists(*FileName))
+		return FFileManagerGeneric::Get().Delete(*FileName);
 	else
-		return 1;
+		return false;
 }
 
 bool UFileManBPLibrary::GetFilesInPath(TArray<FString>& Files, FString Path) {
